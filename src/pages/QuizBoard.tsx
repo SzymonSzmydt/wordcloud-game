@@ -1,7 +1,19 @@
-import style from "./styles/quiz.module.css";
+import { useState } from "react";
+import api from "../../lib/api.json";
+import GameBoard from "../components/board/GameBoard";
 
 function QuizBoard() {
-  return <main className={style.wrapper}>asdasd</main>;
+  const [questionNumber, setQuestionNumber] = useState(0);
+
+  return (
+    <>
+      <GameBoard
+        title={api[questionNumber].question}
+        goodWords={api[questionNumber].good_words}
+        allWords={api[questionNumber].all_words}
+      />
+    </>
+  );
 }
 
 export default QuizBoard;
