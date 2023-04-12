@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import StandardButton from "../buttons/StandardButton";
 import style from "./styles/login.module.css";
 
 function LoginForm() {
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -11,7 +13,8 @@ function LoginForm() {
     const nickname = data.get(`nickname`) as string;
 
     if (nickname.length >= 3) {
-      localStorage.setItem("user", nickname);
+      localStorage.setItem("user", JSON.stringify({ user: nickname }));
+      return navigate("quizboard");
     }
 
     if (nickname.length < 3) {

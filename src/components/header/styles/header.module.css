@@ -1,0 +1,16 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 1rem;
+    background-color: var(--third-color);
+    color: var(--white-color);
+    position: fixed;
+    top: 0;
+}
+
+.wrapper h1,
+.wrapper h2 {
+    margin: 0 2rem;
+}
