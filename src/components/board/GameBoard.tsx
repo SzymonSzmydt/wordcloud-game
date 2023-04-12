@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import StandardButton from "../buttons/StandardButton";
+import WordsList from "./WordsList";
 import style from "./styles/game.module.css";
 
 interface GameBoardProps {
@@ -52,40 +53,14 @@ function GameBoard({ title, allWords, goodWords }: GameBoardProps) {
       <section className={style.body}>
         {allWords
           ? allWords.map((word) => (
-              <div
+              <WordsList
                 key={word}
-                className={
-                  selectedWords.includes(word)
-                    ? style.wordSelected
-                    : style.wordNotSelected
-                }
-                onClick={() => handleWordSelectionLogic(word)}
-              >
-                <div
-                  className={
-                    isChecked &&
-                    selectedWords.includes(word) &&
-                    goodWords.includes(word)
-                      ? style.correct
-                      : isChecked &&
-                        selectedWords.includes(word) &&
-                        !goodWords.includes(word)
-                      ? style.wrong
-                      : ""
-                  }
-                >
-                  {isChecked &&
-                  selectedWords.includes(word) &&
-                  goodWords.includes(word) ? (
-                    <p className={style.summary}>Good!</p>
-                  ) : isChecked &&
-                    selectedWords.includes(word) &&
-                    !goodWords.includes(word) ? (
-                    <p className={style.summary}> Bad!</p>
-                  ) : null}
-                  <p>{word}</p>
-                </div>
-              </div>
+                word={word}
+                selectedWords={selectedWords}
+                isChecked={isChecked}
+                goodWords={goodWords}
+                handleClick={() => handleWordSelectionLogic(word)}
+              />
             ))
           : null}
       </section>
