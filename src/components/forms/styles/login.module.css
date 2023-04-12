@@ -1,0 +1,21 @@
+.form input {
+    width: 100%;
+    height: 2rem;
+    box-sizing: border-box;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--radius);
+    padding: 0 0.5rem;
+    margin: 0;
+}
+
+.form input::placeholder {
+    color: var(--secondary-color);
+}
+
+.error {
+    margin: 0.25rem 0 0 0;
+    color: var(--red-color);
+    font-size: 0.85rem;
+    height: 1rem;
+    width: 100%;
+}

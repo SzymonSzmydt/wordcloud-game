@@ -1,0 +1,26 @@
+.wrapper {
+    animation: shown 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.wrapper h1 {
+    color: var(--primary-color);
+    margin: 0.5rem 2rem 2rem;
+}
+
+@media screen and (max-width: 370px) {
+    .wrapper {
+        margin: 0 0.5rem;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    .wrapper h1 {
+        font-size: 1.5rem;
+    }
+}
