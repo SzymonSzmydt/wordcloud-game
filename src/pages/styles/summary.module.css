@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70%;
+}
+
+.box {
+    text-align: center;
+    padding: 2rem;
+    border-radius: var(--radius);
+    background-color: var(--white-color);
+    box-shadow: var(--shadow);
+}
+
+.title {
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.box h3 {
+    color: var(--secondary-color);
+    margin: 0.5rem;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+}

@@ -3,10 +3,12 @@ import style from "./styles/login.module.css";
 
 function Login() {
   return (
-    <div className={style.wrapper}>
-      <h1>Wordcloud Game</h1>
-      <LoginForm />
-    </div>
+    <main className={style.wrapper}>
+      <section className={style.box}>
+        <h1>Wordcloud Game</h1>
+        <LoginForm />
+      </section>
+    </main>
   );
 }
 

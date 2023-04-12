@@ -3,7 +3,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0.5rem;
+    justify-content: center;
+    height: 70%;
+}
+
+.box {
+    padding: 1rem;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     background-color: var(--white-color);

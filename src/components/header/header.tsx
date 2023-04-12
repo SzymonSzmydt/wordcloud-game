@@ -5,8 +5,10 @@ function Header() {
   const user = userData !== null ? JSON.parse(userData || "") : "";
   return (
     <header className={style.wrapper}>
-      <h1> Wordcloud </h1>
-      <h2> {user.user ?? null}</h2>
+      <section className={style.container}>
+        <h1> WordCloud </h1>
+        <h2> {user.user ?? null}</h2>
+      </section>
     </header>
   );
 }

@@ -14,7 +14,7 @@ function LoginForm() {
 
     if (nickname.length >= 3) {
       localStorage.setItem("user", JSON.stringify({ user: nickname }));
-      return navigate("quizboard");
+      return navigate("/quizboard");
     }
 
     if (nickname.length < 3) {
@@ -32,7 +32,7 @@ function LoginForm() {
         placeholder='Enter your nickname here...'
       />
       <p className={style.error}> {error} </p>
-      <StandardButton name='play' />
+      <StandardButton name='PLAY' />
     </form>
   );
 }
