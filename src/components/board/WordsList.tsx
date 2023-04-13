@@ -43,7 +43,9 @@ function WordsList({
           selectedWords.includes(word) &&
           !goodWords.includes(word) ? (
           <p className={style.summary}> Bad!</p>
-        ) : null}
+        ) : (
+          <p className={style.summary}> {""}</p>
+        )}
         <p>{word}</p>
       </div>
     </section>
