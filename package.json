@@ -2,7 +2,7 @@
   "name": "wordcloud-game",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://szymonszmydt.github.io/",
+  "homepage": "https://szymonszmydt.github.io/wordcloud-game/",
   "type": "module",
   "scripts": {
     "dev": "vite",
