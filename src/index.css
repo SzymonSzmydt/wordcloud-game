@@ -52,7 +52,9 @@ pre {
 }
 
 a {
-    background-color: transparent
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--primary-color);
 }
 
 abbr[title] {

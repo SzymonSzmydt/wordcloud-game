@@ -14,7 +14,7 @@ function Summary() {
 
   return (
     <main className={style.wrapper}>
-      <div>
+      <>
         <section className={style.box}>
           <h1 className={style.title}>
             {score > 0 ? "Congratulations" : "Try again"}, {user} !
@@ -30,7 +30,7 @@ function Summary() {
           />
           <StandardButton name='Logout' handleClick={logout} />
         </section>
-      </div>
+      </>
     </main>
   );
 }
