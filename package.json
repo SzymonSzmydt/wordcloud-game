@@ -2,12 +2,14 @@
   "name": "wordcloud-game",
   "private": true,
   "version": "0.1.0",
+  "homepage": "https://szymonszmydt.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",
