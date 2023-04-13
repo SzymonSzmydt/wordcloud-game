@@ -20,7 +20,8 @@ function Summary() {
             {score > 0 ? "Congratulations" : "Try again"}, {user} !
           </h1>
           <h2 className={style.title}> Your score: </h2>
-          <h3 className={style.title}> {score} points</h3>
+          {/* Zero jeśli score mniejszxe od zera */}
+          <h3 className={style.title}> {score < 0 ? 0 : score} points</h3>
         </section>
         <section className={style.foot}>
           <StandardButton

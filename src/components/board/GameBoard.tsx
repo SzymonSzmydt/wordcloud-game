@@ -27,8 +27,8 @@ function GameBoard({ title, allWords, goodWords }: GameBoardProps) {
     }
   };
 
-  const handleFinishGame = () => {
-    const user = JSON.parse(localStorage.getItem("user") || "");
+  const handleFinishGame = async () => {
+    const user = await JSON.parse(localStorage.getItem("user") || "");
 
     const goodAnswers = selectedWords.filter((word) =>
       goodWords.includes(word)
@@ -69,7 +69,9 @@ function GameBoard({ title, allWords, goodWords }: GameBoardProps) {
       ) : (
         <StandardButton
           name='Check Answers'
-          handleClick={() => setIsChecked(true)}
+          handleClick={() =>
+            selectedWords.length > 0 ? setIsChecked(true) : null
+          }
         />
       )}
     </>

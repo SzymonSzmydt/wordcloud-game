@@ -16,7 +16,7 @@ function WordsList({
   handleClick,
 }: WordsListProps) {
   return (
-    <div
+    <section
       className={
         selectedWords.includes(word)
           ? style.wordSelected
@@ -46,7 +46,7 @@ function WordsList({
         ) : null}
         <p>{word}</p>
       </div>
-    </div>
+    </section>
   );
 }
 
