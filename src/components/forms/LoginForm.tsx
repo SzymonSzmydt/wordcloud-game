@@ -26,7 +26,6 @@ function LoginForm() {
         name='nickname'
         minLength={3}
         maxLength={10}
-        pattern='/^[A-Za-z0-9]*$/'
         required
         placeholder='Enter your nickname here...'
       />
