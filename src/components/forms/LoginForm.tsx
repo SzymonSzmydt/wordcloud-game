@@ -12,14 +12,11 @@ function LoginForm() {
     const data = new FormData(event.currentTarget);
     const nickname = data.get(`nickname`) as string;
 
-    if (nickname.length >= 3) {
+    if (nickname.length >= 3 && nickname.length <= 10) {
       localStorage.setItem("user", JSON.stringify({ user: nickname }));
       return navigate("/quizboard");
     }
-
-    if (nickname.length < 3) {
-      return setError("The nickname is to short!");
-    }
+    return setError("The nickname should contain a maximum of 10 letters");
   };
 
   return (
@@ -28,6 +25,8 @@ function LoginForm() {
         type='text'
         name='nickname'
         minLength={3}
+        maxLength={10}
+        pattern='/^[A-Za-z0-9]*$/'
         required
         placeholder='Enter your nickname here...'
       />
